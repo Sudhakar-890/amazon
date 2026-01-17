@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/checkout-cart.css">
+</head>
+<body>
+    <div id="header">
+        <img id="amazon-img" src="images/amazon-logo.png" alt="amazon img">
+        <p>Checkout &nbsp;(<span style="color: rgb(106, 112, 194);">0 items</span>)</p>
+        <img id="lock-img" src="images/icons/checkout-lock-icon.png" alt="lock icon">
+    </div>
+
+    <section id="center">
+        <div id="left-section">
+
+            <!-- product body -->
+            <h3 id="review">Review your Order</h3>
+            <br>
+            <div class="left-section-center">
+                <!-- added products will appear here -->
+                <div class="cart-product-box">
+                    <h4 class="delivery-date">Delivery Date : Tuesday, May 27</h4>
+                    <div class="cart-product">
+                        <div class="product-details">
+                            <img class="product-img" src="images/products/6-piece-non-stick-baking-set.webp" alt="product img">
+                            <div>
+                            <p class="product-name">6 pieces Nonstick baking set</p>
+                            <p class="product-price">&#8377; 459</p>
+                            <p class="quantity">Quantity : 2 <span style="color:blue">Update Delete</span></p>
+                            </div>
+                        </div>
+                        <div class="delivery-option-box">
+                            <p class="delivery-headings">Choose a delivery option</p>
+                            <div class="delivery-times">
+                                <input type="radio" name="delivery-times" class="delivery-radio-btn">
+                                <div class="charges-times">
+                                    <p style="font-size: medium;font-weight: bold;color:rgb(179, 95, 65)">
+                                        Tuesday, May 27
+                                    </p>
+                                    <p style="font-size:small">
+                                        <span style="color:grey">Free shipping</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="delivery-times">
+                                <input type="radio" name="delivery-times" class="delivery-radio-btn">
+                                <div class="charges-times">
+                                    <p style="font-size: medium;font-weight: bold;color:rgb(179, 95, 65)">
+                                        sunday, May 20
+                                    </p>
+                                    <p style="font-size:small">
+                                        <span style="color:grey">&#8377; 20 - shipping</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="delivery-times">
+                                <input type="radio" name="delivery-times" class="delivery-radio-btn">
+                                <div class="charges-times">
+                                    <p style="font-size: medium;font-weight: bold;color:rgb(179, 95, 65)">
+                                        Thurday, May 15
+                                    </p>
+                                    <p style="font-size:small">
+                                        <span style="color:grey">&#8377; 50 - shipping</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="right-section">
+            <div id="cash-box">
+                <p id="p1">Order Summary</p><br>
+
+                <p class="p2">Items (0) :</p>  
+                <p class="items">&#8377; 0</p><br>
+
+                <p class="p2">Shipping & Handling :</p>
+                <p class="shipping">&#8377; 0</p><br>
+
+                <br>
+
+                <p class="p2">Total before Tax :</p>  
+                <p class="subtotal">&#8377; 0</p><br>
+
+                <p class="p2">Estimated Tax (10%) :</p>
+                <p class="tax">&#8377; 0</p><br>
+
+                <br><br>
+                <p id="p3">Order Total :</p>
+                <p id="total">&#8377; 0</p> 
+                <br>
+                <br>
+                <input type="radio" name="payment" class="payment"><p class="p4">Online Pay </p> <br>
+                <input type="radio" name="payment" class="payment"><p class="p4">Cash on delivery </p> 
+
+                <br>
+                <br>
+                <center>
+                <a href="orderplaced.html"><button class="place-order">Place your order</button></a>
+                </center>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

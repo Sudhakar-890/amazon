@@ -1,0 +1,84 @@
+/* Left section */
+
+#left-section{
+  padding:30px;
+  margin:0px 20px 20px 20px;
+  justify-content: flex-start;
+}
+
+#review{
+  font-size:30px;
+  margin-left:8px;
+  font-weight:900;
+}
+
+.cart-product-box{
+    border: 1px solid rgb(231, 224, 224);
+    background-color: rgb(243, 239, 239);
+    border-radius:10px;
+    padding:20px;
+}
+
+/* Product sides */
+
+.delivery-date{
+    color:rgb(209, 0, 0);
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.cart-product{
+    display:flex;
+    justify-content:space-between;
+}
+
+.product-details{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin:20px 0px;
+    gap:10px;
+}
+
+.product-img{
+    width:150px;
+}
+
+.product-name{
+    font-size:19px;
+    font-weight:100;
+    margin-bottom:20px;
+}
+
+.product-price{
+    color:darkred;
+    font-size:large;
+    font-weight: bolder;
+    margin-bottom:5px;
+}
+
+.quantity{
+    font-weight:bold;
+    font-size:small;
+}
+
+/* Delivery time options */
+
+.delivery-headings{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.delivery-times{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap:15px;
+    margin:10px 0px
+}
+
+
+
+
+
