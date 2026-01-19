@@ -1,13 +1,13 @@
 #center{
     display:flex;
     flex-wrap: wrap;
-    gap:5px;
+    row-gap:15px;
+    justify-content: space-around;
 }
 
 .product-box{
     background-color: rgb(233, 228, 247);
     display:flex;
-    flex-grow:1;
     row-gap:10px;
     width:300px;
     height: 500px;
