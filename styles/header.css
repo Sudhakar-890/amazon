@@ -69,7 +69,6 @@ body{
     background-color: beige;
     padding:3px;
     height:40px;
-    width:;
     flex:0 0 auto;
     margin-left:-1;
     border:1px solid brown;
@@ -81,7 +80,7 @@ body{
     font-size:small;
     font-weight:bold;
     flex:0 0 auto;
-    margin:0px 10px;
+    margin:0px 50px 0px 10px;
 }
 
 .header4{
@@ -91,7 +90,8 @@ body{
 }
 
 .header4 img{
-  width:50px;
+  width:5vw;
+  height:6vh;
 }
 
 .header4 b{
@@ -99,7 +99,7 @@ body{
   color:rgb(0, 255, 0);
   font-size: 20px;
   top:-8px;
-  left:23px;
+  left:33px;
 
 }
 
@@ -142,7 +142,7 @@ body{
     }
     
     .header3{
-        margin:0px 5px;
+        margin:0px 5px 0px 1px;
         font-size:6px;
     }
     
@@ -155,13 +155,12 @@ body{
     }
     
     .header4 img{
-        width:30px;
-        position:static;
+        width:10vw;
     }
 
     .header4 b{
-        font-size:8px;
-        top:-2px;
+        font-size:10px;
+        top:-4px;
         left:50%;
     }
     
