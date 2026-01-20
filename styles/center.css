@@ -84,7 +84,7 @@
     .product-box{
         row-gap: 5px;
         height:240px;
-        width:130px;
+        width:118px;
     }
     
     .product-details{
@@ -107,7 +107,7 @@
     
     .add-quantity{
         padding: 0px;
-        width:25px;
+        width:30px;
         height:12px;
         font-size:3px;
     }
