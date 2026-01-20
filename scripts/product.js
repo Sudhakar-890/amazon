@@ -14,7 +14,7 @@ function htmlBuilder() {
         <div style='width:100%;height:60px;'><p class="product-name line-limit">${products.productName}</p></div>
         <p class="product-ratings"><img src="images/ratings/rating-${(products.productRatings * 10)}.png" alt="ratings"> ${products.productRateCount}</p>
         <p class="product-price">Rs. ${products.productPrice}</p>
-        <select class="add-quantity-${products.productId}">
+        <select class="add-quantity-${products.productId} add-quantity">
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
@@ -90,13 +90,18 @@ function showCartQuantity()
     cart.forEach((carts)=>{
       totalQuantity +=carts.quantity;
     });
-    if (totalQuantity >= 10) {
+    if (totalQuantity >= 10 && totalQuantity<100) {
       btag.innerText = totalQuantity;
-      btag.style.left = '18px';
+      btag.style.left ='37%';
     }
 
-    else {
+    else if(totalQuantity<10) {
       btag.innerText = totalQuantity;
+    }
+    
+    else{
+      btag.innerText ="99+";
+      btag.style.left="33%";
     }
     localStorage.setItem('cart',JSON.stringify(cart))
 }

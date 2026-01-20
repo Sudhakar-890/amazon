@@ -46,10 +46,10 @@ body{
     height:40px;
     max-width: 50vw;
     flex:1 0 auto;
-    padding:15px 15px;
+    padding:15px;
     background-color:bisque;
     color:black;
-    border-radius:10px 0px 0px 10px;
+    border-radius:20px 0px 0px 20px;
     border:1px solid brown;
     margin-right:-1;
     font-size: medium;
@@ -63,17 +63,17 @@ body{
 
 .header2 input::placeholder{
   font-size: medium;
-  font-weight:bold;
 }
 
 .header2 img{
     background-color: beige;
     padding:3px;
     height:40px;
+    width:;
     flex:0 0 auto;
     margin-left:-1;
     border:1px solid brown;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .header3{
@@ -103,5 +103,68 @@ body{
 
 }
 
+@media (max-width:425px)
+{
+    body{
+        padding:70px 10px;
+    }
+    
+    #header{
+        height: 60px;
+        column-gap: 5px;
+    }
+    
+    .header1{
+        margin-left: 10px;
+    }
+    
+    .header1 img{
+        width:40px;
+    }
+    
+    .header2 input{
+        height:22px;
+        padding:5px;
+        font-size:small ;
+        max-width:40vw;
+        border-radius:10px 0px 0px 10px;
+        
+    }
+    
+    .header2 input::placeholder{
+        font-weight:lighter;
+        font-size:x-small;
+    }
+    
+    .header2 img{
+        height:22px;
+        border-radius:0px 10px 10px 0px;
+    }
+    
+    .header3{
+        margin:0px 5px;
+        font-size:6px;
+    }
+    
+    .header3 span{
+        font-size:15px !important;
+    }
+    
+    .header4{
+        margin-right:10px;
+    }
+    
+    .header4 img{
+        width:30px;
+        position:static;
+    }
 
+    .header4 b{
+        font-size:8px;
+        top:-2px;
+        left:50%;
+    }
+    
+    
+}
 
