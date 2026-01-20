@@ -76,13 +76,15 @@
 
 @media (max-width:425px){
     #center{
-        row-gap:6px;
+        row-gap:10px;
+        justify-content: flex-start;
+        column-gap: 5px;
     }
     
     .product-box{
         row-gap: 5px;
-        height:250px;
-        width:100px;
+        height:240px;
+        width:130px;
     }
     
     .product-details{
