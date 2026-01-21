@@ -48,6 +48,7 @@ body{
   display:flex;
   align-items: flex-start;
   justify-content: space-around;
+  height: 100%;
 }
 
 #right-section{
@@ -115,6 +116,73 @@ body{
   font-size:25px;
   border:none;
   margin-top:30px;
+}
+
+@media (max-width:425px)
+{
+  body{
+    padding-top:100px;
+  }
+  
+  #center{
+    flex-direction:column;
+    Justify-content: center;
+  }
+  
+  #header{
+    height:60px;
+  }
+  
+  #amazon-img{
+    width:60px;
+    margin:10px;
+  }
+  
+  #header p{
+    font-size:14px;
+  }
+  
+  #lock-img{
+    width:14;
+    margin:5px;
+  }
+  
+  #right-section{
+    border-radius:3px;
+    margin-right:0px;
+  }
+  
+  #cash-box{
+    display:inline-block;
+    padding:10px;
+    padding-right:20px;
+  }
+  
+  
+  //cash box details
+  
+  #p1{
+    font-size: 15px;
+    margin:15px 0px;
+  }
+  
+  .p2{
+    font-size:10px;
+  }
+  
+  #p3{
+    font-size: 12px;
+  }
+  
+  .p4{
+    font-size:11px;
+  }
+  
+  .place-order{
+    padding:5px 25px;
+    font-size:20px;
+  }
+  
 }
 
 
