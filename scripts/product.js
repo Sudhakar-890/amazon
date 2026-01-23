@@ -92,7 +92,7 @@ function showCartQuantity()
     });
     if (totalQuantity >= 10 && totalQuantity<100) {
       btag.innerText = totalQuantity;
-      btag.style.left ='37%';
+      btag.style.left ='40%';
     }
 
     else if(totalQuantity<10) {

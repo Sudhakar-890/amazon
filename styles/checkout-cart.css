@@ -31,13 +31,13 @@
 
 .cart-product{
     display:flex;
+    flex-direction: row;
     justify-content:space-between;
 }
 
 .product-details{
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
     margin:20px 0px;
     gap:10px;
 }
@@ -79,14 +79,16 @@
     margin:10px 0px
 }
 
-@media (max-width:425){
+@media( max-width:425px )
+{
     #left-section{
         padding:10px;
-        margin:0px 10px 10px 10px;
+        margin:5px;
+        justify-content: center;
     }
     
     #review{
-        font-size: 20px;
+        font-size: 25px;
         margin-left: 4px;
     }
     
@@ -97,20 +99,12 @@
     }
     
     .delivery-date{
-        font-size:14px;
+        font-size:18px;
         margin-bottom:5px;
     }
     
     .cart-product{
         flex-direction:column;
-    }
-    
-    .product-details{
-        flex-direction:column;
-    }
-    
-    .product-img{
-        width:100%;
     }
 
     .product-name{
