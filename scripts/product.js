@@ -76,7 +76,8 @@ function updateCart(productIdBtn,quantity){
         productImg:products.productImg,
         productName:products.productName,
         productPrice:products.productPrice,
-        quantity:quantity
+        quantity:quantity,
+        Options:1
       });
       showCartQuantity();    
     }
