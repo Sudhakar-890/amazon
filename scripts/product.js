@@ -1,5 +1,5 @@
 import { productDetails } from './data.js';
-import { cart } from './cart.js';
+import { cart,store} from './cart.js';
 
 let cartQuantity = 0;
 
@@ -77,13 +77,15 @@ function updateCart(productIdBtn,quantity){
         productName:products.productName,
         productPrice:products.productPrice,
         quantity:quantity,
-        Options:1
+        options:1
       });
       showCartQuantity();    
     }
   });
 }
 
+
+// this helps to adjust the cart number in amazon page in different respective to digits
 function showCartQuantity()
 {
     const btag = document.querySelector('.header4 b');
@@ -104,7 +106,8 @@ function showCartQuantity()
       btag.innerText ="99+";
       btag.style.left="33%";
     }
-    localStorage.setItem('cart',JSON.stringify(cart))
+    store()
 }
+
 
 
