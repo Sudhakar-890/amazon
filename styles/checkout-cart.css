@@ -50,6 +50,10 @@
     font-size:19px;
     font-weight:100;
     margin-bottom:20px;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow:hidden;
 }
 
 .product-price{
@@ -69,7 +73,7 @@
 .delivery-headings{
     font-size:18px;
     font-weight:bold;
-}
+}#42445A
 
 .delivery-times{
     display:flex;
@@ -99,7 +103,7 @@
     }
     
     .delivery-date{
-        font-size:18px;
+        font-size:17px;
         margin-bottom:5px;
     }
     
@@ -107,6 +111,10 @@
         flex-direction:column;
     }
 
+    .product-img{
+        height:100px;
+    }
+    
     .product-name{
         margin-bottom: 10px;
     }

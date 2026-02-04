@@ -42,11 +42,18 @@ document.querySelectorAll('.delivery-times').forEach((radio)=>{
         const {deliveryOption,productId} = radio.dataset
         cart.forEach((carts)=>{
             if(productId==carts.productId){
-                console.log('in condition : '+productId,carts.productId)
                 carts.options = deliveryOption;
-                console.log(carts.options)
                 store();
-                UpdatedeliveryTime(carts);
+                
+                let html
+                 deliveryTimeOptions.forEach((delivery)=>{
+                 const toChange = delivery.id==carts.options
+                 toChange ? html =  delivery.deliveryTime 
+                 : ''
+                 })
+        const deliveryDate = document.querySelector(`.delivery-date-${carts.productId}`);
+        const dateString = "";
+        deliveryDate.innerText = '';
             }
         });     
     });
