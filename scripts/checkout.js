@@ -44,16 +44,6 @@ document.querySelectorAll('.delivery-times').forEach((radio)=>{
             if(productId==carts.productId){
                 carts.options = deliveryOption;
                 store();
-                
-                let html
-                 deliveryTimeOptions.forEach((delivery)=>{
-                 const toChange = delivery.id==carts.options
-                 toChange ? html =  delivery.deliveryTime 
-                 : ''
-                 })
-        const deliveryDate = document.querySelector(`.delivery-date-${carts.productId}`);
-        const dateString = "";
-        deliveryDate.innerText = '';
             }
         });     
     });
