@@ -73,7 +73,7 @@
 .delivery-headings{
     font-size:18px;
     font-weight:bold;
-}#42445A
+}
 
 .delivery-times{
     display:flex;
@@ -125,6 +125,14 @@
     
     .quantity{
         font-size: x-small;
+    }
+    
+    .delivery-option-box{
+        margin-left:10px;
+    }
+    
+    .delivery-times{
+        margin-left:10px;
     }
 }
 

@@ -1,8 +1,6 @@
 import {cart,store} from './cart.js';
 import UpdatedeliveryTime,{deliveryDate} from './delivery.js';
 
-
-console.log(cart)
 let html = '';
 
 updateCartHTML();
