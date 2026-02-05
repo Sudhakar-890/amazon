@@ -1,12 +1,14 @@
-import {cart,store} from './cart.js';
+import {cart,store,toNewCart} from './cart.js';
 import UpdatedeliveryTime,{deliveryDate} from './delivery.js';
 
-let html = '';
+refreshPage()
 
+function refreshPage(){
 updateCartHTML();
 
 function updateCartHTML()
 {
+    let html = '';
     document.querySelector('#cart-length').innerText=cart.length;
     cart.forEach((carts)=>{
     html+=`  
@@ -18,7 +20,7 @@ function updateCartHTML()
                     <div>
                         <p class="product-name">${carts.productName}</p>
                         <p class="product-price">&#8377; ${carts.productPrice}</p>
-                        <p class="quantity">Quantity : ${carts.quantity} <span style="color:blue">&nbsp;&nbsp;&nbsp;&nbsp;Update &nbsp;&nbsp; Delete </span></p>
+                        <p class="quantity">Quantity :<p class='count-${carts.productId}'> ${carts.quantity}</p> <span style="color:blue">&nbsp;&nbsp;&nbsp;&nbsp;<a class='update'>Update</a> &nbsp;&nbsp; <a class='del' data-product-id='${carts.productId}'>Delete</a> </span></p>
                     </div>
                 </div>
                 <div class="delivery-option-box">
@@ -42,8 +44,23 @@ document.querySelectorAll('.delivery-times').forEach((radio)=>{
             if(productId==carts.productId){
                 carts.options = deliveryOption;
                 store();
+                refreshPage();
             }
         });     
     });
 })
+
+document.querySelectorAll('.del').forEach((del)=>{
+    del.addEventListener('click',()=>{
+        const productId = del.dataset.productId;
+        let newCart = cart.filter((carts)=>
+            productId!=carts.productId
+        );
+        toNewCart(newCart);
+        refreshPage();
+    });
+});
+
+
+}
 
