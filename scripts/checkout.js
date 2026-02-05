@@ -1,8 +1,6 @@
 import {cart,store} from './cart.js';
 import UpdatedeliveryTime,{deliveryDate} from './delivery.js';
 
-
-console.log(cart)
 let html = '';
 
 updateCartHTML();
@@ -42,11 +40,10 @@ document.querySelectorAll('.delivery-times').forEach((radio)=>{
         const {deliveryOption,productId} = radio.dataset
         cart.forEach((carts)=>{
             if(productId==carts.productId){
-                console.log('in condition : '+productId,carts.productId)
                 carts.options = deliveryOption;
-                console.log(carts.options)
                 store();
                 UpdatedeliveryTime(carts);
+                deliveryDate(carts);
             }
         });     
     });

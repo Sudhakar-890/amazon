@@ -24,7 +24,6 @@ function UpdatedeliveryTime(carts)
 
     deliveryTimeOptions.forEach((delivery,index)=>{
             const isChecked = delivery.id==carts.options
-            console.log(delivery.id,carts.options)
             const isFree = delivery.id===1
 
             html += 
@@ -47,7 +46,7 @@ function UpdatedeliveryTime(carts)
 
     });
 
-
+    
     return html
 }
 
