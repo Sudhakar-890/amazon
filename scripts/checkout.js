@@ -43,7 +43,6 @@ document.querySelectorAll('.delivery-times').forEach((radio)=>{
                 carts.options = deliveryOption;
                 store();
                 UpdatedeliveryTime(carts);
-                deliveryDate(carts);
             }
         });     
     });
