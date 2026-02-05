@@ -62,4 +62,13 @@ export const productDetails=[{
     productRatings:5,
     productRateCount:6271,
     productPrice:1099,
-}]
+},
+{
+    productId:1009,
+    productImg:'coffeemaker-with-glass-carafe-black.jpg',
+    productName:'Coffee maker',
+    productRatings:4.5,
+    productRateCount:2583,
+    productPrice:3299,
+}
+]
