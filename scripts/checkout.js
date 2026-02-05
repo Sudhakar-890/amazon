@@ -44,6 +44,7 @@ document.querySelectorAll('.delivery-times').forEach((radio)=>{
             if(productId==carts.productId){
                 carts.options = deliveryOption;
                 store();
+                refreshPage();
             }
         });     
     });
