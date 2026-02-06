@@ -20,7 +20,10 @@ function updateCartHTML()
                     <div>
                         <p class="product-name">${carts.productName}</p>
                         <p class="product-price">&#8377; ${carts.productPrice}</p>
-                        <p class="quantity">Quantity :<p class='count-${carts.productId}'> ${carts.quantity}</p> <span style="color:blue">&nbsp;&nbsp;&nbsp;&nbsp;<a class='update'>Update</a> &nbsp;&nbsp; <a class='del' data-product-id='${carts.productId}'>Delete</a> </span></p>
+                        <p class="quantity">Quantity :<p class='count-${carts.productId} count'> ${carts.quantity}</p> 
+                            <span style="color:blue">&nbsp;&nbsp;&nbsp;&nbsp;<p class='update'>Update</p> &nbsp;&nbsp; <p class='del' data-product-id='${carts.productId}'>Delete</p> 
+                            </span>
+                            </p>
                     </div>
                 </div>
                 <div class="delivery-option-box">

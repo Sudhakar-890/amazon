@@ -83,6 +83,11 @@
     margin:10px 0px
 }
 
+.del, .update, .count{
+    font-size: 5px;
+    display:inline;
+}
+
 @media( max-width:425px )
 {
     #left-section{
