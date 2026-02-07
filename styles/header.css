@@ -124,14 +124,15 @@ body{
     .header2 input{
         height:22px;
         padding:5px;
-        font-size:small ;
+        font-size:6px ;
+        font-weight:normal;
         max-width:40vw;
         border-radius:5px 0px 0px 5px;
         
     }
     
     .header2 input::placeholder{
-        font-weight:lighter;
+        font-weight:normal;
         font-size:x-small;
     }
     
