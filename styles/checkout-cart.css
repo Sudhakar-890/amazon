@@ -44,6 +44,8 @@
 
 .product-img{
     width:150px;
+    height:160px;
+    object-fit:contain;
 }
 
 .product-name{
@@ -83,9 +85,32 @@
     margin:10px 0px
 }
 
-.del, .update, .count{
-    font-size: 5px;
+.count{
+    font-size: 16px;
+    margin:0;
+    margin-left:5px;
+    font-weight:bold;
     display:inline;
+}
+
+.del, .update{
+    display:inline-block;
+    color:blue;
+    font-size: 15px;
+    cursor:pointer;
+}
+
+.buttons{
+    margin-top:20px;
+}
+
+.input-count{
+    width:50px;
+    border-radius: 4px;
+    margin:0px;
+    margin-left:10px;
+    display:none;
+    padding-left:5px;
 }
 
 @media( max-width:425px )
