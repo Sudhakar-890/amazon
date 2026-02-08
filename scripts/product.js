@@ -106,7 +106,7 @@ function showCartQuantity()
       btag.innerText ="99+";
       btag.style.left="33%";
     }
-    store()
+    store();
 }
 
 

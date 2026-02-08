@@ -64,6 +64,68 @@ export function deliveryDate(carts){
 export default UpdatedeliveryTime;
 
 
+export function updatePrice(cart){
+    let Pricehtml = '';
+    let totalQuantity = 0;
+    let itemPrice = 0;
+    let itemCharges = 0;
+    let totalPrice = 0;
+    let GstPrice = 0;
+    let totalGstPrice = 0;
+    cart.forEach((carts)=>{
+        totalQuantity += carts.quantity;
+        itemPrice += (carts.productPrice * carts.quantity);
+        const deliveryId = carts.options;
+        deliveryTimeOptions.forEach((delivery)=>{
+            if(deliveryId==delivery.id)
+            itemCharges += delivery.charges;
+        });
+    });
+
+    totalPrice = itemPrice + itemCharges;
+    GstPrice = (totalPrice * 0.05).toFixed(2);
+    totalGstPrice = totalPrice + GstPrice;
+
+    Pricehtml = 
+    `
+         <div id="cash-box">
+                <p id="p1">Order Summary</p><br>
+
+                <p class="p2">Items (<span style='color:orange;'>${totalQuantity}</span>) :</p>  
+                <p class="items">&#8377; ${itemPrice}</p><br>
+
+                <p class="p2">Shipping & Handling :</p>
+                <p class="shipping">&#8377; ${itemCharges}</p><br>
+
+                <br>
+
+                <p class="p2">Total before Tax :</p>  
+                <p class="subtotal">&#8377; ${totalPrice}</p><br>
+
+                <p class="p2">Estimated Tax (5%) :</p>
+                <p class="tax">&#8377; ${GstPrice}</p><br>
+
+                <br><br>
+                <p id="p3">Order Total :</p>
+                <p id="total">&#8377; ${totalGstPrice}</p> 
+                <br>
+                <br>
+                <input type="radio" name="payment" class="payment"><p class="p4">Online Pay </p> <br>
+                <input type="radio" name="payment" class="payment"><p class="p4">Cash on delivery </p> 
+
+                <br>
+                <br>
+                <center>
+                <a href="orderplaced.html"><button class="place-order">Place your order</button></a>
+                </center>
+
+            </div>    
+    `;
+
+    document.querySelector('#right-section').innerHTML = Pricehtml;
+}
+
+
 
 
 

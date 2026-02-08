@@ -63,6 +63,10 @@
     border-radius:10px;
 }
 
+.add-quantity{
+    cursor: pointer;
+}
+
 .add-cart-button{
     font-size:22px;
     color:black;
@@ -73,6 +77,10 @@
     display:inline-block;
     width:80%;
     margin:30px 20px 5px 20px;
+}
+
+.add-cart-button:hover{
+    cursor:pointer;
 }
 
 @media (max-width:425px){

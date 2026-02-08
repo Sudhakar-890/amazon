@@ -1,5 +1,5 @@
 import { cart, store, toNewCart } from './cart.js';
-import UpdatedeliveryTime, { deliveryDate } from './delivery.js';
+import UpdatedeliveryTime, { deliveryDate,updatePrice } from './delivery.js';
 
 refreshPage()
 
@@ -7,10 +7,13 @@ function refreshPage() {
 	updateCartHTML();
 
 	function updateCartHTML() {
-		let html = '';
+
 		document.querySelector('#cart-length').innerText = cart.length;
-		cart.forEach((carts) => {
-			html += `  
+
+		if (cart.length > 0) {
+			let html = '';
+			cart.forEach((carts) => {
+				html += `  
         <div class="cart-product-box del-${carts.productId}">
             <h4 class="delivery-date delivery-date-${carts.productId}">Delivery Date : ${deliveryDate(carts)}</h4>
             <div class="cart-product">
@@ -35,12 +38,25 @@ function refreshPage() {
             </div>
         </div>
     `;
-		});
+			});
 
+			const cartBox = document.querySelector('.left-section-center');
+			cartBox.innerHTML = html;
+		}
 
-		const cartBox = document.querySelector('.left-section-center');
-		cartBox.innerHTML = html;
+		else {
+			const emptyContainer = document.querySelector('.left-section-center');
+			emptyContainer.innerHTML = '';
+			emptyContainer.setAttribute('class', 'emptyContainerCSS');
+			const emptyText = document.createElement('p');
+			emptyText.className = 'emptyTextCSS';
+			emptyText.innerText = 'Your cart is Empty ! ';
+			emptyContainer.appendChild(emptyText)
+		}
+
 	}
+
+	updatePrice(cart);
 
 	document.querySelectorAll('.delivery-times').forEach((radio) => {
 		radio.addEventListener('change', () => {
@@ -66,52 +82,52 @@ function refreshPage() {
 		});
 	});
 
+	const inputCount = document.querySelectorAll('.input-count');
+	const update = document.querySelectorAll('.update');
 
-const inputCount = document.querySelectorAll('.input-count');
-const update = document.querySelectorAll('.update');
-
-update.forEach((updateBtn) => {
-	updateBtn.addEventListener('click', () => {
-		if(updateBtn.innerText=='Update'){
-			const productId1 = updateBtn.dataset.productId;
-			updateBtn.innerText = 'Save';
-			inputCount.forEach((inputCountBox) => {
-				const productId = inputCountBox.dataset.productId
-				if (productId1 == productId) {
-					const displayQuantity = document.querySelector(`.count-${productId}`);
-					inputCountBox.style.display = 'inline';
-					displayQuantity.style.display='none';
-					cart.forEach((carts)=>{
-						if(carts.productId==productId){
-							const quantity = carts.quantity;
-							inputCountBox.value = quantity;
-						}
-			 		});
-				}
-			});
-		}
-		else if(updateBtn.innerText=='Save'){
-			const productId1 = updateBtn.dataset.productId;
-			updateBtn.innerText = 'Update';
-			inputCount.forEach((inputCountBox) => {
-				const productId = inputCountBox.dataset.productId
-				if (productId1 == productId) {
-					const displayQuantity = document.querySelector(`.count-${productId}`);
-					displayQuantity.style.display='inline-block';
-					const newQuantity = inputCountBox.value;
-					inputCountBox.style.display = 'none';
-					cart.forEach((carts)=>{
-						if(carts.productId==productId){
-							carts.quantity = newQuantity;
-							displayQuantity.innerText = newQuantity;
-							store();
-						}
-			 		});
-				}
-			});
-		}
+	update.forEach((updateBtn) => {
+		updateBtn.addEventListener('click', () => {
+			if (updateBtn.innerText == 'Update') {
+				const productId1 = updateBtn.dataset.productId;
+				updateBtn.innerText = 'Save';
+				inputCount.forEach((inputCountBox) => {
+					const productId = inputCountBox.dataset.productId
+					if (productId1 == productId) {
+						const displayQuantity = document.querySelector(`.count-${productId}`);
+						inputCountBox.style.display = 'inline';
+						displayQuantity.style.display = 'none';
+						cart.forEach((carts) => {
+							if (carts.productId == productId) {
+								const quantity = carts.quantity;
+								inputCountBox.value = quantity;
+							}
+						});
+					}
+				});
+			}
+			else if (updateBtn.innerText == 'Save') {
+				const productId1 = updateBtn.dataset.productId;
+				updateBtn.innerText = 'Update';
+				inputCount.forEach((inputCountBox) => {
+					const productId = inputCountBox.dataset.productId
+					if (productId1 == productId) {
+						const displayQuantity = document.querySelector(`.count-${productId}`);
+						displayQuantity.style.display = 'inline-block';
+						const newQuantity = inputCountBox.value;
+						inputCountBox.style.display = 'none';
+						cart.forEach((carts) => {
+							if (carts.productId == productId) {
+								carts.quantity = Number(newQuantity);
+								displayQuantity.innerText = newQuantity;
+								store();
+								refreshPage();
+							}
+						});
+					}
+				});
+			}
+		});
 	});
-});
 
 
 }
