@@ -84,7 +84,7 @@ export function updatePrice(cart){
 
     totalPrice = itemPrice + itemCharges;
     GstPrice = (totalPrice * 0.05).toFixed(2);
-    totalGstPrice = totalPrice + GstPrice;
+    totalGstPrice = totalPrice + Number(GstPrice);
 
     Pricehtml = 
     `

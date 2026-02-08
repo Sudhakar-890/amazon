@@ -160,7 +160,9 @@
     }
 
     .product-img{
-        height:100px;
+        height:100%;
+        width:50%;
+        object-fit: contain;
     }
     
     .product-name{
@@ -181,6 +183,15 @@
     
     .delivery-times{
         margin-left:10px;
+    }
+    
+    .emptyContainerCSS{
+        width:90vw;
+    }
+    
+    .emptyTextCSS{
+        transform:translateY(20px);
+        font-size:30px;
     }
 }
 
