@@ -52,7 +52,7 @@ function checkCart(productIdBtn)
 {
   let existsProduct=false;
   const quantity = Number(document.querySelector(`.add-quantity-${productIdBtn}`).value);
-
+  document.querySelector(`.add-quantity-${productIdBtn}`).value = 1;
   cart.forEach(carts=>{
     if(productIdBtn==carts.productId)
     {

@@ -1,6 +1,8 @@
 import { cart, store, toNewCart } from './cart.js';
 import UpdatedeliveryTime, { deliveryDate,updatePrice } from './delivery.js';
 
+let isHidden = true;
+
 refreshPage()
 
 function refreshPage() {
@@ -8,6 +10,7 @@ function refreshPage() {
 
 	function updateCartHTML() {
 
+		const rightSection = document.querySelector('#right-section');
 		document.querySelector('#cart-length').innerText = cart.length;
 
 		if (cart.length > 0) {
@@ -51,7 +54,10 @@ function refreshPage() {
 			const emptyText = document.createElement('p');
 			emptyText.className = 'emptyTextCSS';
 			emptyText.innerText = 'Your cart is Empty ! ';
-			emptyContainer.appendChild(emptyText)
+			emptyContainer.appendChild(emptyText);
+
+			rightSection.classList.add('hidden');
+			
 		}
 
 	}
@@ -116,7 +122,7 @@ function refreshPage() {
 						const newQuantity = inputCountBox.value;
 						inputCountBox.style.display = 'none';
 						cart.forEach((carts) => {
-							if (carts.productId == productId) {
+							if (carts.productId == productId && newQuantity>0) {
 								carts.quantity = Number(newQuantity);
 								displayQuantity.innerText = newQuantity;
 								store();

@@ -1,7 +1,7 @@
 /* Left section */
 
 #left-section{
-  padding:30px;
+  padding:0px 30px;
   margin:0px 20px 20px 20px;
   justify-content: flex-start;
 }

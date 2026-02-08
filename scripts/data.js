@@ -51,9 +51,9 @@ export const productDetails=[{
     productId:1007,
     productImg:'black-2-slot-toaster.jpg',
     productName:'Black 2-slot toaster',
-    productRatings:4.5,
-    productRateCount:977,
-    productPrice:49,
+    productRatings:2.5,
+    productRateCount:5747,
+    productPrice:459,
 },
 {
     productId:1008,
