@@ -8,13 +8,32 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*header*/
 
 #header{
   height:80px;
-  display:grid;
-  grid-template-columns: 100px 1fr 1fr;
+  padding:10px;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
   position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background-color:blue;
+}
+
+#amazon-img{
+  flex:0 0 100px;
+}
+
+#amazon-img img{
+  width:100%;
+  object-fit:cover;
+  background-color:red;
+}
+
+#heading{
+  font-size:20px;
 }
 
 
