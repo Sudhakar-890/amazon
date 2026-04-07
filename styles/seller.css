@@ -1,0 +1,129 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+}
+
+.adminUser{
+    width:100%;
+    height: 100px;
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -5px 5px 20px goldenrod;
+}
+
+.adminUser .profileDetails{
+    width:40%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:40px;
+}
+
+.adminUser .profileBox{
+    width: 15%;
+    height:70%;
+}
+
+.adminUser img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 10px gold);
+}
+
+
+.adminUser .logoBox {
+    width: 25%;
+    height: 80%;
+    flex-shrink: 0;
+    flex-basis: 350px;
+}
+
+.adminUser .logoBox img{
+    object-fit: cover;
+    width:40%;
+    margin-left:20px;
+}
+
+
+.adminUser h1{
+    font-size: 30px;
+    font-weight: normal;
+    color:gold;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+    border-radius: 20px;
+    width:80%;
+    height:400px;
+    margin: 40px auto;
+}
+
+.container{
+    width:60%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer{
+    width:30%;
+    height: 50%;
+}
+
+.imgContainer .image{
+    width:80%;
+    height: 80%;
+    border:rgb(208, 216, 178) solid 2px;
+    background-color: white;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container input{
+    width:60%;
+    padding: 10px;
+    margin:5px;   
+}
+
+.container h1{
+    color:white;
+    margin-bottom:30px;
+}
+
+.addProduct{
+    padding:10px 25px;
+    border:none;
+    outline:none;
+    border-radius: 20px;
+    font-size:20px;
+    background-color: goldenrod;
+    color:whitesmoke;
+    font-weight:900;
+    transition: all 0.5s;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.37);
+}
+
+.addProduct:active{
+    transform: scale(0.85);
+}

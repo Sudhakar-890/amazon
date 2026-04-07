@@ -1,0 +1,80 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(208, 235, 194);
+    padding:10px;
+}
+
+h2{
+    font-size:45px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color:goldenrod;
+    margin-bottom:10px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.301),1px 1px rgb(255, 255, 255);
+}
+
+.imgBox{
+    width:350px;
+    height:200px;
+    margin:30px auto 20px;
+    padding:10px;
+    border: none;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.inputBox{
+    margin-top: 20px;
+    display:flex;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.301);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    height:500px;
+    border-radius: 20px;
+    padding:10px 50px 30px;
+    width: 50%;
+    box-shadow: inset -15px -15px 40px rgba(0, 0, 0, 0.301);
+}
+
+.inputBox input{
+    width:50%;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin:10px;
+    color:goldenrod;
+    box-shadow:inset -2px -2px 10px rgba(0, 0, 0, 0.301);
+}
+
+.inputBox p{
+    text-align: right;
+    color:blue;
+    font-size:15px;
+}
+
+.inputBox .verify{
+    padding:10px 90px;
+    box-shadow: inset -5px -5px 10px rgba(22, 22, 21, 0.568);
+    color:white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size:18px;
+    margin-top:30px;
+    background-color: goldenrod;
+}
+
+
+

@@ -1,4 +1,5 @@
-export const productDetails=[{
+export let productDetails= JSON.parse(localStorage.getItem('product')) || 
+ [{
     productId:1001,
     productImg:'6-piece-white-dinner-plate-set.jpg',
     productName:'6-piece white dinner plate set',
@@ -67,8 +68,39 @@ export const productDetails=[{
     productId:1009,
     productImg:'coffeemaker-with-glass-carafe-black.jpg',
     productName:'Coffee maker',
-    productRatings:4.5,
+    productRatings:5,
     productRateCount:2583,
     productPrice:3299,
+},
+{
+    productId:1010,
+    productImg:'cotton-bath-towels-teal.webp',
+    productName:'cotton bath towels',
+    productRatings:4.5,
+    productRateCount:7783,
+    productPrice:94399
 }
 ]
+
+export function saveToStorage(productDetails){
+    localStorage.setItem('product', JSON.stringify(productDetails));
+    productDetails = JSON.parse(localStorage.getItem('product'));
+}
+
+export const adminUserData = localStorage.getItem('adminUserData') || [
+    {
+        adminEmail : 'vaishnavi@gmail.com',
+        adminPass : '1234'
+    },
+    {
+        adminEmail : 'rubika@gmail.com',
+        adminPass : '1234'
+    }
+]
+
+export let curAdminUser = JSON.parse(localStorage.getItem('curAdmin')) || [];
+
+export function saveCurUser(user){
+    localStorage.setItem('curAdmin',JSON.stringify(user));
+    curAdminUser = JSON.parse(localStorage.getItem('curAdmin')) || [];
+}
