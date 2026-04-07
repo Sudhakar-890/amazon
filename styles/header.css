@@ -5,13 +5,13 @@
 }
 
 body{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(223, 226, 181);
   font-family:Arial, Helvetica, sans-serif;
   padding:100px 20px;
 }
 
 #header{
-    background-color: rgb(1, 1, 77);
+    background-color: brown;
     display:flex;
     align-items:center;
     justify-content: space-evenly;
@@ -65,7 +65,7 @@ body{
 }
 
 .header2 img{
-    background-color: beige;
+    background-color: gold;
     padding:3px;
     height:40px;
     flex:0 0 auto;

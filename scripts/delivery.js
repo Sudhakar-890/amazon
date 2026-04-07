@@ -116,7 +116,7 @@ export function updatePrice(cart){
                 <br>
                 <br>
                 <center>
-                <a href="orderplaced.html"><button class="place-order">Place your order</button></a>
+                <a href="track.html"><button class="place-order">Place your order</button></a>
                 </center>
 
             </div>    

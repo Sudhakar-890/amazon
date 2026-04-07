@@ -6,10 +6,15 @@ let cartQuantity = 0;
 htmlBuilder();
 
 function htmlBuilder() {
+  console.log(productDetails)
   productDetails.forEach((products) => {
+    let imgSource = `images/products/${products.productImg}`;
+    if(products.productImg.startsWith('data:')){
+      imgSource = products.productImg;
+    }
     const html = `
         <div class="product-box">
-      <img class="product-image" src="images/products/${products.productImg}" alt="product image">
+      <img class="product-image" src="${imgSource}" alt="product image">
       <div class="product-details">
         <div style='width:100%;height:60px;'><p class="product-name line-limit">${products.productName}</p></div>
         <p class="product-ratings"><img src="images/ratings/rating-${(products.productRatings * 10)}.png" alt="ratings"> ${products.productRateCount}</p>
@@ -93,7 +98,7 @@ function showCartQuantity()
     cart.forEach((carts)=>{
       totalQuantity +=carts.quantity;
     });
-    if (totalQuantity >= 10 && totalQuantity<100) {
+    if (totalQuantity >= 10 && totalQuantity<100){
       btag.innerText = totalQuantity;
       btag.style.left ='40%';
     }

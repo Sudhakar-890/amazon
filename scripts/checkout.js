@@ -16,12 +16,17 @@ function refreshPage() {
 		if (cart.length > 0) {
 			let html = '';
 			cart.forEach((carts) => {
+				let imgSource = `images/products/${carts.productImg}`;
+				if (carts.productImg.startsWith('data:')) {
+					imgSource = carts.productImg;
+				}
+
 				html += `  
         <div class="cart-product-box del-${carts.productId}">
             <h4 class="delivery-date delivery-date-${carts.productId}">Delivery Date : ${deliveryDate(carts)}</h4>
             <div class="cart-product">
                 <div class="product-details">
-                    <img class="product-img" src="images/products/${carts.productImg}" alt="product img">
+                    <img class="product-img" src="${imgSource}" alt="product img">
                     <div>
                         <p class="product-name">${carts.productName}</p>
                         <p class="product-price">&#8377; ${carts.productPrice}</p>
